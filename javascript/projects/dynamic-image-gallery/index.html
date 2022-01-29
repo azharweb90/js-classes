@@ -15,11 +15,11 @@
     <div class="container imageGallery">
         <h1 class="center">Dynamic Image Gallery</h1>
 
-        <form class="form imageGallery__form">
+        <form class="form imageGallery__form" id="ig-form">
             <div class="row">
                 <div class="three columns"> &nbsp;</div>
                 <div class="four columns">
-                    <input type="number" placeholder="Enter Count" class="form__input" />
+                    <input type="number" placeholder="Enter Count" class="form__input" id="ig-input" required />
                 </div>
                 <div class="two columns">
                     <button class="button-primary">Show</button>
@@ -28,7 +28,7 @@
         </form>
 
         <div class="gallery">
-            <ul class="gallery__items row">
+            <ul class="gallery__items row" id="ig-items">
                 <li class="gallery__item three columns">
                     <img src="../../../project-design.png" alt="gallery image" class="gallery__image" />
                 </li>
@@ -55,10 +55,12 @@
                 </li>
             </ul>
             <div class="gallery__footer">
-                <button type="button" class="button-primary ">Load more</button>
+                <button type="button" class="button-primary" id="ig-load-more">Load more</button>
             </div>
         </div>
     </div>
+    <script src="./js/dynamic-image-gallery.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
