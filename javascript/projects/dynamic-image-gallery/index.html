@@ -5,11 +5,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/skeleton.css" />
+    <link rel="stylesheet" href="./css/custom-style.css" />
     <title>Dynamic Image Gallery</title>
 </head>
 
 <body>
+    <div class="container imageGallery">
+        <h1 class="center">Dynamic Image Gallery</h1>
 
+        <form class="form imageGallery__form">
+            <div class="row">
+                <div class="three columns"> &nbsp;</div>
+                <div class="four columns">
+                    <input type="number" placeholder="Enter Count" class="form__input" />
+                </div>
+                <div class="two columns">
+                    <button class="button-primary">Show</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="gallery">
+            <ul class="gallery__items row">
+                <li class="gallery__item three columns">
+                    <img src="../../../project-design.png" alt="gallery image" class="gallery__image" />
+                </li>
+                <li class="gallery__item three columns">
+                    <img src="../../../project-design.png" alt="gallery image" class="gallery__image" />
+                </li>
+                <li class="gallery__item three columns">
+                    <img src="../../../project-design.png" alt="gallery image" class="gallery__image" />
+                </li>
+                <li class="gallery__item three columns">
+                    <img src="../../../project-design.png" alt="gallery image" class="gallery__image" />
+                </li>
+                <li class="gallery__item three columns">
+                    <img src="../../../project-design.png" alt="gallery image" class="gallery__image" />
+                </li>
+                <li class="gallery__item three columns">
+                    <img src="../../../project-design.png" alt="gallery image" class="gallery__image" />
+                </li>
+                <li class="gallery__item three columns">
+                    <img src="../../../project-design.png" alt="gallery image" class="gallery__image" />
+                </li>
+                <li class="gallery__item three columns">
+                    <img src="../../../project-design.png" alt="gallery image" class="gallery__image" />
+                </li>
+            </ul>
+            <div class="gallery__footer">
+                <button type="button" class="button-primary ">Load more</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

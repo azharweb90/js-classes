@@ -1,0 +1,33 @@
+.form__input{
+    width: 100%;
+}
+.imageGallery{
+    margin-top: 12px;
+}
+.imageGallery__form{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gallery__items {
+    list-style: none;
+}
+.gallery__item{
+    margin-bottom: 38px;
+}
+.gallery__item:nth-child(4n+1){
+    margin-left: 0;
+}
+.gallery__image {
+    width: 100%;
+}
+.gallery__footer{
+    display: flex;
+    justify-content: center;
+}
+
+/* Utility Classes */
+.center{
+    text-align: center;
+}
+
