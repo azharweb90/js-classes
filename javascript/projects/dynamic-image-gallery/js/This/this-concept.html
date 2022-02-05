@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <form id="printNameForm">
+      <input type="text" id="nameInput" />
+      <button type="submit" id="printNameBtn">print name</button>
+    </form>
+    <script>
+      // const student = {
+      //   name: "Azhar"
+      // };
+      // var name = "Ramesh";
+      // const user = {
+      //   name: "Ronit",
+      //   initShowName: function () {
+      //     console.log("name outer === ", this.name);
+      //     //var outerThis = this;
+
+      //     document.getElementById("id").addEventListener("click", () => {
+      //       console.log("Name inner:", this.name);
+      //     });
+      //   }
+      // };
+
+      // user.initShowName();
+
+      // user.showName.call(student);
+
+      // user.showName();
+
+      // var showName = user.showName.bind(student);
+
+      // function main() {
+      //   console.log(this); //window //student
+
+      //   const user = {
+      //     name: "Ronit",
+      //     showName: () => {
+      //       console.log("Name is:", this.name);
+      //     }
+      //   };
+      //   user.showName();
+      // }
+
+      // main.call(student);
+      // var a = "|hello";
+
+      // function sum() {
+      //   return this.a + this.b;
+      // }
+
+      // function sumPrinter(a, b) {
+      //   // this.a = a;
+      //   // this.b = b;
+
+      //   // sum();
+      //   const obj = { a: a, b: b };
+      //   sum.call(obj);
+      // }
+
+      // sumPrinter(10, 20);
+
+      function printName() {
+        console.log(this.name);
+      }
+
+      const tool = {
+        initPrintName() {
+          document
+            .getElementById("printNameForm")
+            .addEventListener("submit", function () {
+              const name = document.getElementById("nameInput").value;
+              var nameObj = {
+                name: name
+              };
+              printName.call(nameObj);
+            });
+        }
+      };
+
+      tool.initPrintName();
+
+      const user = {
+        name: "Ronit"
+      };
+
+      printName.call(user);
+    </script>
+  </body>
+</html>
