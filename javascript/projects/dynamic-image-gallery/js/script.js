@@ -1,5 +1,6 @@
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
+
       // document ready
       const digPrefix= "ig";
       DIG({

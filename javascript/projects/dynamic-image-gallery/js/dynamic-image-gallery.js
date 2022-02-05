@@ -7,6 +7,7 @@
 
 //gallery source
 
+//Module Pattern: Module pattern is a way to encapsulate logic in a file both public and private methods.
 var DIG = (function(){
     const dig = {
         formSelector:'',
@@ -17,9 +18,11 @@ var DIG = (function(){
         loadMoreBtnSelector:'',
         source:[],
         initForm(){
-            document.getElementById(this.formSelector).addEventListener("submit",()=>{
-
-            })
+            document.getElementById(this.formSelector).addEventListener("submit", this.formSubmit)
+        },
+        formSubmit(ev) {
+            ev.preventDefault();
+                const inputValue = this.formInputSelector.value;
         },
         init(formSelector,
             formInputSelector,
